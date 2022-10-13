@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ngkaiyi00/FIT3179/main/datasets/day_wise.csv"
+  },
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Date", "type": "temporal"},
+    "y": {
+      "field": "Confirmed",
+      "type": "quantitative",
+      "title": "Confirmed Cases"
+    }
+  },
+  "config": {}
+}
