@@ -3,7 +3,40 @@
   "title": "COVID-19 Active Cases (July 2020)",
   "width": 800,
   "height": 400,
-  "projection": {"type": "equalEarth"},
+  "projection": {"type": "equalEarth", "scale": {"expr": "zoom_level"},"center": {"expr": "[cLng,cLat]"} 
+},
+  "params": [{
+    "name": "zoom_level",
+    "value": 140,
+    "bind": {
+    "input": "range",
+    "min": 140,
+    "max": 1000,
+    "step": 10,
+    "name": "Zoom: "
+            }},
+            {
+    "name": "cLng",
+    "value": 0,
+    "bind": {
+    "input": "range",
+    "min": -180,
+    "max": 180,
+    "step": 10,
+    "name": "centre λ: "
+            }},
+
+             {
+    "name": "cLat",
+    "value": 0,
+    "bind": {
+    "input": "range",
+    "min": -90,
+    "max": 90,
+    "step": 10,
+    "name": "centre 𝜙: "
+            }}
+            ],
   "layer": [
     {
       "data": {
