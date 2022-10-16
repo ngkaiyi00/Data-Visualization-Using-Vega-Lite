@@ -2,162 +2,154 @@
 <html>
 
 <head>
-  <title>Multiple Visualisations | An Example</title>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <title>Multiple Visualisations | An Example</title>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-  <!-- Import pure.css -->
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Import pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-  <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
 
 </head>
 
 <body>
 
-  <div class="page">
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <h1>World COVID-19 Cases (January 2020 - July 2020)</h1>
-        <p>COVID-19 pandemic is a global health crisis which has led to a dramatic loss of human life worldwide. The COVID-19 pandemic has had significant negative impact on economic including the COVID-19 recession which is the second largest global recession in recent history and 2020 stock market crash. To visualise how serioud COVID-19 is, I will show you the charts created from COVID-19(January 2020 - July 2020) datasets and its analysis.</p>
-      </div>
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-          <h2>COVID-19 Cases by Country</h2>
-          <p>The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+    <div class="page">
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h1 style="text-align:center">World COVID-19 Cases (January 2020 - July 2020)</h1>
+                <p style="text-align:center">
+                    COVID-19 pandemic is a global health crisis which has led to a dramatic loss of human life worldwide. The COVID-19 pandemic has had significant negative impact on economic including the COVID-19 recession which is the second largest global recession in recent history and 2020 stock market crash. To visualise how serioud COVID-19 is, I will show you the charts created from COVID-19(January 2020 - July 2020) datasets and its analysis.</p>
+            </div>
         </div>
-      </div>
-      <div class="pure-u-1">
-        <div id="vis1" class="vis-container" style="display: table; margin: 0 auto;"></div>
-      </div>
-    </div>
-    <p></p>
-    <p></p>
-    <!-- end pure grid group -->
+        <!-- end pure grid group -->
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-          <h2>Percentage of COVID-19 Cases by Continent</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h2>COVID-19 Cases by Country</h2>
+                <p>The first column contains text and the second column contains a visualisation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+            </div>
+            <div class="pure-u-1">
+                <div id="vis1" class="vis-container" style="display: table; margin: 0 auto;"></div>
+            </div>
         </div>
-      </div>
-      <div class="pure-u-1">
-        <div id="vis2" class="vis-container" style="display: table; margin: 0 auto;"></div>
-      </div>
-    </div>
-    <p></p>
-    <p></p>
-    <!-- end pure grid group -->
+        <p></p>
+        <p></p>
+        <!-- end pure grid group -->
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-3">
-        <div class="description description-left">
-          <h2>How Does the Total Cases Affect the Total Deaths?</h2>
-          <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h2>Percentage of COVID-19 Cases by Continent</h2>
+                <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.
+                </p>
+            </div>
+            <div class="pure-u-1">
+                <div id="vis2" class="vis-container" style="display: table; margin: 0 auto;"></div>
+            </div>
         </div>
-      </div>
-      <div class="pure-g">
-      <div class="pure-u-2-3">
-        <div id="vis3" class="vis-container"></div>
-      </div>
-    
-    </div>
-    <p></p>
-    <p></p>
-    <!-- end pure grid group -->
-    
-    <!-- pure grid group -->
-    
-     <div class="pure-g">
-      <div class="pure-u-2-3">
-        <div id="vis4" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3">
-        <div class="description description-right">
-          <h2>Ranking of Countries over Time</h2>
-          <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+        <p></p>
+        <p></p>
+        <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                <div class="description description-left">
+                    <h2>How Does the Total Cases Affect the Total Deaths?</h2>
+                    <p>The first and second columns are combined. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+                </div>
+            </div>
+            <div class="pure-u-2-3">
+                <div id="vis3" class="vis-container"></div>
+            </div>
         </div>
-      </div>
-      <div class="pure-g">
-      <div class="pure-u-2-3">
-        <div id="vis4" class="vis-container"></div>
-      </div>
+        <p></p>
+        <p></p>
+        <!-- end pure grid group -->
 
-    </div>
-    <p></p>
-    <p></p>
-    <!-- end pure grid group -->
-    
-     <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-          <h2>Trend of Deaths caused by COVID-19 over Time</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+        <!-- pure grid group -->
+
+        <div class="pure-g">
+            <div class="pure-u-2-3">
+                <div id="vis4" class="vis-container"></div>
+            </div>
+            <div class="pure-u-1-3">
+                <div class="description description-right">
+                    <h2>Ranking of Countries over Time</h2>
+                    <p>The first and second columns are combined. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="pure-u-1">
-        <div id="vis5" class="vis-container" style="display: table; margin: 0 auto;"></div>
-      </div>
+        <p></p>
+        <p></p>
+        <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h2>Trend of Deaths caused by COVID-19 over Time</h2>
+                <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.
+                </p>
+            </div>
+            <div class="pure-u-1">
+                <div id="vis5" class="vis-container" style="display: table; margin: 0 auto;"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+
+
     </div>
-    <!-- end pure grid group -->
+    <!-- end page -->
 
+    <script type="text/javascript">
+        var specVis1 = "./js/map.vg.json";
+        var specVis2 = "./js/waffle.vg.json";
+        var specVis3 = "./js/bubble.vg.json";
+        var specVis4 = "./js/bumpchart.vg.json";
+        var specVis5 = "./js/line.vg.json";
 
-  </div> <!-- end page -->
+        vegaEmbed('#vis1', specVis1, {
+            "actions": false
+        });
 
-  <script type="text/javascript">
-    var specVis1 = "./js/map.vg.json";
-    var specVis2 = "./js/waffle.vg.json";
-    var specVis3 = "./js/bubble.vg.json";
-    var specVis4 = "./js/bumpchart.vg.json";
-    var specVis5 = "./js/line.vg.json";
+        vegaEmbed('#vis2', specVis2, {
+            "actions": false
+        }).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
 
-    vegaEmbed('#vis1', specVis1, { "actions": false });
+        vegaEmbed('#vis3', specVis3, {
+            "actions": false
+        }).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
 
-    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
+        vegaEmbed('#vis4', specVis4, {
+            "actions": false
+        }).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
 
-    vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-    vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-    
-     vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-  </script>
+        vegaEmbed('#vis5', specVis5, {
+            "actions": false
+        }).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+    </script>
 </body>
 
 </html>
