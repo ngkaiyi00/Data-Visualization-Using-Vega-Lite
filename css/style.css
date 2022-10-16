@@ -2,8 +2,8 @@ body *{
     font-family: 'Open Sans', sans-serif;
 }
 
-h1,h2,p {
-    font-weight: 900;
+h1 {
+    
     text-align: center;
 }
 
@@ -24,8 +24,11 @@ body {
 }
 
 .description h2,
-h1 {
+h1,h2,p {
     margin-top: 0px;
+	text-align: center;
+}
+
 }
 
 .description-right {
