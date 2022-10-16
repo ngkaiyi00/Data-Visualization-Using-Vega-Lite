@@ -7,7 +7,7 @@
 
 "vconcat": [
 {
-"width": 800,
+"width": 1000,
 "height": 400,
 "mark": "area",
 "encoding": {
@@ -21,7 +21,7 @@
 }
 },
 {
-"width": 800,
+"width": 1000,
 "height": 80,
 "mark": "area",
 "params": [
