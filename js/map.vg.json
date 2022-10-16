@@ -104,5 +104,6 @@
       }
     }
   ],
-  "config": {"background":"papayawhip"}
+  "config": {"background":"papayawhip"},
+  "font": "verdana"
 }
