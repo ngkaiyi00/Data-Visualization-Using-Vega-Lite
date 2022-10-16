@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Covid-19 July 2020 | An Example</title>
+  <title>Multiple Visualisations | An Example</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -27,23 +27,26 @@
 <body>
 
   <div class="page">
-
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1>Covid-19 July 2020</h1>
+        <h1>World COVID-19 Cases (January 2020 - July 2020)</h1>
+        <p>COVID-19 pandemic is a global health crisis which has led to a dramatic loss of human life worldwide. The COVID-19 pandemic has had significant negative impact on economic including the COVID-19 recession which is the second largest global recession in recent history and 2020 stock market crash. To visualise how serioud COVID-19 is, I will show you the charts created from COVID-19(January 2020 - July 2020) datasets and its analysis.</p>
       </div>
     </div>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Choropleth Map</h2>
+      <div class="pure-u-1-1">
+          <h2>COVID-19 Cases by Country</h2>
+          <p>The first column contains text and the second column contains a visualisation.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
         </div>
       </div>
-      <div class="pure-u-1-2">
+      <div class="pure-u-1">
         <div id="vis1" class="vis-container"></div>
       </div>
     </div>
@@ -51,18 +54,16 @@
 
     <!-- pure grid group -->
     <div class="pure-g">
-      <div class="pure-u-1-3">
-        <div class="description description-left">
-          <h2>Donut Chart and Line Chart</h2>
+      <div class="pure-u-1-1">
+          <h2>Percentage of COVID-19 Cases by Continent</h2>
+          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
+            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
         </div>
       </div>
-      <div class="pure-u-1-3">
-        <div id="vis4" class="vis-container"></div>
+      <div class="pure-u-1">
+        <div id="vis2" class="vis-container"></div>
       </div>
-      <div class="pure-u-1-3" style="width: 31.5%;">
-        <div id="vis3" class="vis-container" style="margin-left: 5px;"></div>
-      </div>
-
     </div>
     <!-- end pure grid group -->
 
@@ -73,30 +74,32 @@
       </div>
       <div class="pure-u-1-3">
         <div class="description description-right">
-          <h2>Bubble Chart</h2>
+          <h2>First and Second Columns Combined</h2>
+          <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
+            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
         </div>
       </div>
-      
-    <div class="pure-u-1-3">
-        <div id="vis4" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3" style="width: 31.5%;">
-        <div id="vis3" class="vis-container" style="margin-left: 5px;"></div>
-      </div>
-      
+
     </div>
     <!-- end pure grid group -->
 
-    
+    <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+        <p>This visualisation is created by <a href="https://fit3179.github.io/Vega-Lite/" target="_blank">FIT3179
+            Teaching Team</a>. The datasource is <a href="#" target=" _blank">some data repository online</href>.</p>
+      </div>
+    </div>
 
 
   </div> <!-- end page -->
 
   <script type="text/javascript">
     var specVis1 = "./js/map.vg.json";
-    var specVis2 = "./js/bubble.vg.json";
-    var specVis3 = "./js/line.vg.json";
-    var specVis4 = "./js/donut.vg.json";
+    var specVis2 = "./js/waffle.vg.json";
+    var specVis3 = "./js/bubble.vg.json";
+    var specVis4 = "./js/bump.vg.json";
+    var specVis5 = "./js/line.vg.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
@@ -104,11 +107,11 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+    vegaEmbed('#vis3', specVis1, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+    vegaEmbed('#vis4', specVis2, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
