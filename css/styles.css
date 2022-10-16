@@ -4,7 +4,19 @@ body *{
 
 h1 {
     font-weight: 900;
+    font-size: 70px;
 }
+
+h2 {
+    font-size: 35px;
+}
+
+p {
+    font-size: 25px;
+    max-width: 45ch;
+    margin: auto;
+}
+
 
 body {
     background-color: lightgray;
@@ -28,10 +40,14 @@ h1 {
 
 .description-right {
     padding-left: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .description-left {
     padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .pure-g {
