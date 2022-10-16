@@ -1,14 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "This is a faceted percentage based waffle chart. The transforms below perform the following functions: 1. Create a column that shows the count of all cars. 2. Create a column that shows the count of all cars grouped by Origin. 3. Divide transform 2 by transform 3 to get a percentage. 4. Aggregate the input table so to only have two columns for Origin and Percent and 3 rows. 5. Create a sequence from 1 to 100 as an additional column. 6. Flatten the newly created sequence column so the table expands to 300 rows (100 rows per Origin). 7. Create a new column where each row is either coded as the Origin or blank. 8. Calculate row numbers. 9. Calculate column numbers.",
-  "data": {
-    "url": "https://raw.githubusercontent.com/ngkaiyi00/FIT3179/main/datasets/cleaned_for_donut.csv"
-  },
+  "data": {"url": "https://raw.githubusercontent.com/ngkaiyi00/FIT3179/main/datasets/cleaned_for_donut.csv"},
   "transform": [
     {
-      "joinaggregate": [
-        {"op": "sum", "field": "TotalCases", "as": "Total_Cases"}
-      ]
+      "joinaggregate": [{"op": "sum", "field": "TotalCases", "as": "Total_Cases"}]
     },
     {
       "joinaggregate": [
@@ -33,9 +28,7 @@
     {"calculate": "ceil (datum.Sequence / 10)", "as": "row"},
     {"calculate": "datum.Sequence - datum.row * 10", "as": "col"}
   ],
-  "facet": {
-    "column": {"field": "Continent", "header": {"labelOrient": "bottom"}}
-  },
+  "facet": {"column": {"field": "Continent", "header": {"labelOrient": "bottom"}}},
   "spec": {
     "mark": {
       "type": "square",
@@ -58,5 +51,5 @@
       "tooltip": [{"field": "Continent", "type": "nominal"}]
     }
   },
-  "config": {}
+  "config": {"background":"papayawhip"}
 }
