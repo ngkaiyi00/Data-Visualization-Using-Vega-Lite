@@ -1,43 +1,52 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {
-    "url": "https://raw.githubusercontent.com/ngkaiyi00/FIT3179/main/datasets/day_wise.csv"
-  },
-  "vconcat": [
-    {
-      "width": 800,
-      "height": 400,
-      "mark": "area",
-      "encoding": {
-        "x": {
-          "field": "Date",
-          "type": "temporal",
-          "scale": {"domain": {"param": "brush"}},
-          "axis": {"title": "", "grid": false}
-        },
-        "y": {
-          "field": "New cases",
-          "type": "quantitative",
-          "axis": {"grid": false}
-        }
-      }
-    },
-    {
-      "width": 800,
-      "height": 80,
-      "mark": "area",
-      "params": [
-        {"name": "brush", "select": {"type": "interval", "encodings": ["x"]}}
-      ],
-      "encoding": {
-        "x": {"field": "Date", "type": "temporal", "axis": {"grid": false}},
-        "y": {
-          "field": "New cases",
-          "type": "quantitative",
-          "axis": {"tickCount": 3, "grid": false}
-        }
-      }
+"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"data": {
+"url":
+"https://raw.githubusercontent.com/ngkaiyi00/FIT3179/main/datasets/day_wise.csv"
+},
+
+"vconcat": [
+{
+"width": 800,
+"height": 400,
+"mark": "area",
+"encoding": {
+"x": {
+"field": "Date",
+"type": "temporal",
+"scale": {"domain": {"param": "brush"}},
+"axis": {"title": "", "grid": false}
+},
+"y": {"field": "New cases", "type": "quantitative", "axis":{"grid": false}}
+}
+},
+{
+"width": 800,
+"height": 80,
+"mark": "area",
+"params": [
+{"name": "brush", "select": {"type": "interval",
+"encodings": ["x"]}}
+],
+"encoding": {
+"x": {"field": "Date", "type": "temporal", "axis":{"grid": false}},
+"y": {
+"field": "New cases",
+"type": "quantitative",
+"axis": {"tickCount": 3, "grid": false}
+}
+}
+}
+],
+"config": 
+
+{ "background": "papayawhip",
+      "view": {
+          "stroke":"papayawhip"
+      },
+      "title": {
+          "color": "white"
+      },
+      "font": "verdana"
     }
-  ],
-  "config": {}
 }
