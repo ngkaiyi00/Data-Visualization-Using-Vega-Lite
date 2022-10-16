@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "COVID-19 Active Cases (July 2020)",
   "width": 800,
   "height": 400,
   "projection": {"type": "equalEarth", "scale": {"expr": "zoom_level"},"center": {"expr": "[cLng,cLat]"} 
