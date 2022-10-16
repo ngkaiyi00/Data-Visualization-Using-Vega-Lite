@@ -93,6 +93,7 @@
       "encoding": {
         "color": {
           "field": "TotCasesPer1mPop",
+          "title": "Total Cases/1M Population",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
@@ -105,7 +106,7 @@
           {
             "field": "TotCasesPer1mPop",
             "type": "quantitative",
-            "title": "Total Cases /100K Population"
+            "title": "Total Cases/1M Population"
           }
         ]
       }
