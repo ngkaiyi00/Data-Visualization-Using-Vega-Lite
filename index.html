@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Multiple Visualisations | An Example</title>
+    <title>COVID-19 Visualisation</title>
     <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -40,7 +40,7 @@
         <div class="pure-g">
             <div class="pure-u-1-1">
                 <h2 style="text-align:center">COVID-19 Cases by Country</h2>
-                <p style="text-align:center">The first column contains text and the second column contains a visualisation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+                <p style="text-align:center">The map below is a choropleth map which shows the normalised total number of COVID-19 cases per 1M population of each country. The country with <b>GREATER</b> intensity of colour has <b>GREATER</b> total COVID-19 cases per 1M population. I have highlighted countries with <b>High</b> intensity such as <b><font color = "#a63603">CHILE</font></b>,<b><font color = "#a63603">OMAN</font></b>,<b><font color = "#a63603">UNITED STATES OF AMERICA</font></b>,<b><font color = "#a63603">BRAZIL</font></b> and <b><font color = "#a63603">PERU.</font></b> </p>
             </div>
             <p></p>
             <p></p>
@@ -56,7 +56,8 @@
         <div class="pure-g">
             <div class="pure-u-1-1">
                 <h2 style="text-align:center">Percentage of COVID-19 Cases by Continent</h2>
-                <p style="text-align:center">Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.
+                <p style="text-align:center">
+                    The waffle chart below is showing the percentage of total number of COVID-19 cases by continent.From the waffle chart,we can clearly see that <b><font color = "#edb879">NORTH AMERICA</font></b> has the <b>GREATEST</b> number of COVID-19 cases while <b><font color = "#1979a9">AFRICA</font></b> has the <b>LEAST</b> number of COVID-19 cases.
                 </p>
             </div>
             <div class="pure-u-1">
@@ -72,7 +73,7 @@
             <div class="pure-u-1-3">
                 <div class="description description-left">
                     <h2 style="text-align:center">How Does the Total Cases Affect the Total Deaths?</h2>
-                    <p style="text-align:center">The first and second columns are combined. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+                    <p style="text-align:center"> The bubble chart on the right is showing how total number of COVID-19 cases affect the Total Deaths. The size is representing the population of country while the colour is representing the continent. We can see that <b><font color = "dark pink">UNITED STATES OF AMERICA</font></b> has the <b>GREATEST</b> number of total COVID-19 cases and total deaths caused by COVID-19. </p>
                 </div>
             </div>
             <div class="pure-u-2-3">
@@ -92,7 +93,10 @@
             <div class="pure-u-1-3">
                 <div class="description description-right">
                     <h2 style="text-align:center">Ranking of Countries over Time</h2>
-                    <p style="text-align:center">The first and second columns are combined. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+                    <p style="text-align:center"> Over time,we may see that some countries may have higher number of COVID-19 cases. The bump chart on the left shows their ranking based on months from January 2020 - July 2020. We can see that <b><font color = "green">US</font></b> ranked
+                        <b>NO.1</b> for 5 consecutive months from January 2020 to July 2020.
+
+                    </p>
                 </div>
             </div>
         </div>
@@ -103,8 +107,8 @@
         <!-- pure grid group -->
         <div class="pure-g">
             <div class="pure-u-1-1">
-                <h2 style="text-align:center">Trend of Deaths caused by COVID-19 over Time</h2>
-                <p style="text-align:center">Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.
+                <h2 style="text-align:center">Trend of New Cases over Time</h2>
+                <p style="text-align:center"> The area chart below shows the <b>TREND</b> of new COVID-19 cases from January 2020 to July 2020. We can clearly see that there was an <b>UPWARD</b> trend starting from March to July and the peak was at <b>MID JULY</b>.
                 </p>
             </div>
             <div class="pure-u-1">
@@ -122,7 +126,7 @@
         var specVis2 = "./js/waffle.vg.json";
         var specVis3 = "./js/bubble.vg.json";
         var specVis4 = "./js/bumpchart.vg.json";
-        var specVis5 = "./js/line.vg.json";
+        var specVis5 = "./js/area.vg.json";
 
         vegaEmbed('#vis1', specVis1, {
             "actions": false
