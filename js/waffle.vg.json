@@ -51,5 +51,6 @@
       "tooltip": [{"field": "Continent", "type": "nominal"}]
     }
   },
-  "config": {"background":"papayawhip"}
+  "config": {"background":"papayawhip"},
+  "font": "verdana"
 }
