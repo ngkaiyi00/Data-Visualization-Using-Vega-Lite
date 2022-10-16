@@ -28,9 +28,7 @@
         "field": "MONTH",
         "type": "ordinal",
         "axis": {
-          "labelAngle": 1,
-          "labelColor": "white",
-          "titleColor": "white"
+          "labelAngle": 1
         },
         "title": "Month"
       },
